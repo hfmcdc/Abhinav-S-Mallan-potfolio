@@ -189,15 +189,7 @@ function animateParticles() {
 }
 animateParticles();
 
-/* === Forms and Smooth Scroll === */
-const contactForm = document.getElementById('contact-form');
-const modal = document.getElementById('popup-modal');
-const closeModal = document.getElementById('close-modal');
-
-contactForm.addEventListener('submit', (e) => { e.preventDefault(); modal.classList.remove('hidden'); contactForm.reset(); });
-closeModal.addEventListener('click', () => modal.classList.add('hidden'));
-modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.add('hidden'); });
-
+/* === Smooth Scroll === */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
