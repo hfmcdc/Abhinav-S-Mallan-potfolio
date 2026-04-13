@@ -42,7 +42,8 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero">
-            <div class="hero-content visible">
+            <div class="hero-content visible" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img src="assets/dp2.png" alt="Mr_Mallu_gg" class="glass card-3d" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 2rem; border: 3px solid var(--electric-blue); box-shadow: 0 0 30px rgba(0, 225, 255, 0.4);">
                 <p class="greeting">Hi, I am</p>
                 <h1 class="glitch" data-text="Abhinav S Mallan">Abhinav S Mallan</h1>
                 <p class="subtitle">Class 12 CS Student <span class="accent">|</span> Coder <span class="accent">|</span> Creative Editor.</p>
@@ -56,19 +57,25 @@
         <!-- About Me / Interactive Terminal Section -->
         <section id="about" class="section">
             <h2 class="section-title appear">About Me<span class="dot">.</span></h2>
-            <div class="terminal-container appear glass">
-                <div class="terminal-header">
-                    <div class="terminal-dots">
-                        <span class="tdot red"></span>
-                        <span class="tdot yellow"></span>
-                        <span class="tdot green"></span>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; align-items: center;">
+                <div class="terminal-container appear glass card-3d" style="width: 100%; margin: 0;">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="tdot red"></span>
+                            <span class="tdot yellow"></span>
+                            <span class="tdot green"></span>
+                        </div>
+                        <div class="terminal-title">admin@abhinav-pc: ~</div>
                     </div>
-                    <div class="terminal-title">admin@abhinav-pc: ~</div>
+                    <div class="terminal-body" id="terminal-text"></div>
+                    <div class="terminal-input" id="terminal-cursor-line" style="opacity: 0;">
+                        <span class="prompt-user">admin@abhinav-pc</span><span class="prompt-char">~$</span>
+                        <span class="blinking-cursor">_</span>
+                    </div>
                 </div>
-                <div class="terminal-body" id="terminal-text"></div>
-                <div class="terminal-input" id="terminal-cursor-line" style="opacity: 0;">
-                    <span class="prompt-user">admin@abhinav-pc</span><span class="prompt-char">~$</span>
-                    <span class="blinking-cursor">_</span>
+                
+                <div class="about-images appear" style="width: 100%; display: flex; justify-content: center;">
+                    <img src="assets/photo1.jpg.jpg" alt="Abhinav" class="glass card-3d" style="width: 80%; max-width: 400px; height: auto; border-radius: 16px; object-fit: cover; border: 2px solid rgba(0, 255, 163, 0.4); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
                 </div>
             </div>
         </section>
@@ -80,11 +87,12 @@
                 
                 <!-- Instagram Profile Card -->
                 <div class="showcase-card appear glass hover-target card-3d" style="text-align: center;">
-                    <div class="card-image code-bg" style="height: 160px; background: linear-gradient(135deg, rgba(131, 58, 180, 0.4), rgba(253, 29, 29, 0.4), rgba(252, 176, 69, 0.4)); position: relative;">
-                        <!-- Profile Picture Placeholder -->
-                        <div style="width: 120px; height: 120px; border-radius: 50%; background: #05070c url('https://cdn-icons-png.flaticon.com/512/847/847969.png') center/cover; border: 4px solid #05070c; position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%); box-shadow: 0 10px 30px rgba(0,0,0,0.5);"></div>
+                    <div class="card-image code-bg" style="height: 160px; background: linear-gradient(135deg, rgba(131, 58, 180, 0.4), rgba(253, 29, 29, 0.4), rgba(252, 176, 69, 0.4));">
                     </div>
-                    <div class="card-content" style="padding-top: 80px; padding-bottom: 2.5rem;">
+                    <div class="card-content" style="padding-top: 0; padding-bottom: 2.5rem; display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid #05070c; margin-top: -60px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; background-color: #05070c; z-index: 10; flex-shrink: 0;">
+                            <img src="assets/dp1.jpg" alt="Instagram DP" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                        </div>
                         <h3 style="font-size: 1.8rem; margin-bottom: 0.2rem;">Abhinav S Mallan</h3>
                         <p style="color: var(--electric-blue); font-weight: 600; font-size: 1.1rem; margin-bottom: 1rem;">@mr_mallu_gg</p>
                         <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 85%; margin: 0 auto 2rem; line-height: 1.8;">
@@ -109,26 +117,32 @@
         <!-- Education Section -->
         <section id="education" class="section">
             <h2 class="section-title appear">Education<span class="dot">.</span></h2>
-            <div class="timeline">
-                <div class="timeline-item appear">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass hover-target">
-                        <h3>Class 12 (CBSE) <span class="date desktop-date">Current</span></h3>
-                        <h4>SN Public School</h4>
-                        <p>Focus: Computer Science & Mathematics</p>
-                        <span class="date mobile-date">Current</span>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; align-items: center;">
+                <div class="timeline">
+                    <div class="timeline-item appear">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass hover-target">
+                            <h3>Class 12 (CBSE) <span class="date desktop-date">Current</span></h3>
+                            <h4>SN Public School</h4>
+                            <p>Focus: Computer Science & Mathematics</p>
+                            <span class="date mobile-date">Current</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item appear" style="transition-delay: 0.2s;">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass hover-target">
+                            <h3>ICSE Class 10</h3>
+                            <h4>Trinity Lyceum School</h4>
+                            <p>Graduated 2025</p>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item appear" style="transition-delay: 0.2s;">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass hover-target">
-                        <h3>ICSE Class 10</h3>
-                        <h4>Trinity Lyceum School</h4>
-                        <p>Graduated 2025</p>
-                    </div>
+                <!-- Extra Photo Filler Node -->
+                <div class="education-image appear" style="width: 100%; display: flex; justify-content: center;">
+                    <img src="assets/photo3.jpg.jpg" alt="Traditional Attire" class="glass card-3d" style="width: 80%; max-width: 380px; height: auto; border-radius: 16px; object-fit: cover; border: 2px solid rgba(0, 225, 255, 0.4); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
                 </div>
             </div>
-            <p class="location appear" style="transition-delay: 0.4s;">
+            <p class="location appear" style="transition-delay: 0.4s; margin-top: 2rem;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 5px; color: var(--electric-blue);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 Based in Kollam, Kerala, India.
             </p>
